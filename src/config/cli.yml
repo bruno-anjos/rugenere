@@ -1,0 +1,27 @@
+name: rugenere
+version: "0.1"
+author: Bruno Anjos <bruno.vale.anjos@gmail.com>
+about: Vigenére cipher encoder and decoder.
+args:
+    - input:
+        help: input file name to read encoded content from
+        short: i
+        long: input
+        takes_value: true
+    - output:
+        help: output file name to write decoded content to
+        short: o
+        long: output
+        takes_value: true
+    - mode:
+        help: sets mode to encode or decode
+        short: m
+        long: mode
+        required: true
+        takes_value: true
+        possible_values: [encode, decode]
+    - key:
+        help: key used to encode or decode the content
+        required: true
+        takes_value: true
+        index: 1
