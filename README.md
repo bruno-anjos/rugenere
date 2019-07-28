@@ -1,4 +1,4 @@
-This is a simple vigenere cipher tool written in rust. I'll improve the README.md in the future.
+This is a simple vigenere cipher tool written in rust.
 
 ## Features
 - Take input from file
@@ -6,3 +6,6 @@ This is a simple vigenere cipher tool written in rust. I'll improve the README.m
 - Encode
 - Decode
 - CLI options
+
+## TODO
+- Improve README with examples and CLI options
