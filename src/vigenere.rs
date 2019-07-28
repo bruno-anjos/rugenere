@@ -1,18 +1,60 @@
 use std::char;
 
-pub fn encode(input: &String, key: &str) -> String{
-	let key_chars: Vec<char> = key.chars().collect();
-	let output = vec![0; input.len()];
+pub enum CipherMode {
+	ENCODE,
+	DECODE,
+}
 
-	for (i, input_char) in input.chars().enumerate() {
-		output[i] = if input_char.is_uppercase() {
-			(input_char as i32) + ((key_chars[i % key_chars.len()] as i32) - ('a' as i32))
-		} else {
-			
+pub fn do_final(input: &String, key: &str, mode: &CipherMode) -> String {
+	let key_chars: Vec<char> = key.chars().collect();
+	let mut output = Vec::new();
+	let mut i = 0;
+
+	for input_char in input.chars() {
+		if !input_char.is_alphabetic() {
+			output.push(input_char);
+			i += 1;
+			continue;
+		}
+		output.push(change_char(
+			input_char,
+			key_chars[i % key_chars.len()],
+			mode,
+		));
+		i += 1;
+	}
+
+	output.into_iter().collect()
+}
+
+pub fn change_char(input: char, key_char: char, mode: &CipherMode) -> char {
+	let (key_char_corrected, initial_char) = if input.is_lowercase() {
+		(key_char.to_ascii_lowercase(), 'a')
+	} else if input.is_uppercase() {
+		(key_char.to_ascii_uppercase(), 'A')
+	} else {
+		panic!("character {} is neither lowercase or uppercase", input);
+	};
+
+	let mut result = ((input as u8) as i32
+		+ ((match mode {
+			CipherMode::ENCODE => 1,
+			CipherMode::DECODE => -1,
+		}) * ((key_char_corrected as u8) - (initial_char as u8)) as i32)) as u8;
+
+	if input.is_ascii_lowercase() {
+		result = match result as u8 {
+			0...96 => result + 26,
+			123...150 => result - 26,
+			_ => result,
+		}
+	} else if input.is_ascii_uppercase() {
+		result = match result as u8 {
+			0...64 => result + 26,
+			91...127 => result - 26,
+			_ => result,
 		}
 	}
 
-	output.into_iter().collect();
+	result as char
 }
-
-pub fn decode(input: &String, output: &mut String, key: &str) {}
