@@ -4,12 +4,12 @@ author: Bruno Anjos <bruno.vale.anjos@gmail.com>
 about: Vigenére cipher encoder and decoder.
 args:
     - input:
-        help: input file name to read encoded content from
+        help: file name to read content from
         short: i
         long: input
         takes_value: true
     - output:
-        help: output file name to write decoded content to
+        help: file name to write content to
         short: o
         long: output
         takes_value: true
