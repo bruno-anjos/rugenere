@@ -82,3 +82,11 @@ mlal mq ef obyftdx
 ## Built with
 
 - [clap](https://clap.rs/) - rust library to parse CLI arguments
+
+## Contributing
+
+If you detect any bug or find any way to improve the code, please make a pull request or submit an issue.
+
+## License
+
+This project is licensed under the GNU License - see the LICENSE.md file for details
