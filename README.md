@@ -20,7 +20,7 @@ Run **rugenere** with the `--help` to get helpful information
 
 ```bash
 > ./rugenere --help
-rugenere 0.1
+rugenere 1.0
 Bruno Anjos <bruno.vale.anjos@gmail.com>
 Vigenére cipher encoder and decoder.
 
