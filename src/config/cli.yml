@@ -1,5 +1,5 @@
 name: rugenere
-version: "0.1"
+version: "1.0"
 author: Bruno Anjos <bruno.vale.anjos@gmail.com>
 about: Vigenére cipher encoder and decoder.
 args:
