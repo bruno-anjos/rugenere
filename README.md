@@ -10,13 +10,11 @@ To install this tool just clone the git repository by running the following comm
 > git clone https://github.com/bruno-anjos/rugenere.git
 ```
 
-## Running
+## Examples
 
 I made it easier to run this tool by creating a link to the binary in the target directory.
 
-### Examples
-
-#### help
+### help
 
 Run **rugenere** with the `--help` to get helpful information
 
@@ -42,7 +40,7 @@ ARGS:
     <key>    key used to encode or decode the content
 ```
 
-#### encode
+### encode
 
 Run **rugenere** with the `m` flag set to `encode`
 
@@ -52,7 +50,7 @@ THis Is AN exaMPlE
 Result: MLal Mq EF obyFTdX
 ```
 
-#### decode
+### decode
 
 Run **rugenere** with the `m` flag set to `decode`
 
@@ -62,7 +60,7 @@ MLal Mq EF obyFTdX
 Result: THis Is AN exaMPlE
 ```
 
-#### with input file
+### with input file
 
 Run **rugenere** with the `i` flag followed by the file name
 
@@ -71,7 +69,7 @@ Run **rugenere** with the `i` flag followed by the file name
 Result: mlal mq ef obyftdx
 ```
 
-#### with output file
+### with output file
 
 Run **rugenere** with the `o` flag followed by the file name
 
