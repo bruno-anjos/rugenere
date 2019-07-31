@@ -85,7 +85,7 @@ mlal mq ef obyftdx
 
 ## Contributing
 
-If you detect any bug or find any way to improve the code, please make a [pull](https://github.com/bruno-anjos/rugenere/pulls) request or submit an [issue](https://github.com/bruno-anjos/rugenere/issues).
+If you detect any bug or find any way to improve the code, please make a [pull request](https://github.com/bruno-anjos/rugenere/pulls) or submit an [issue](https://github.com/bruno-anjos/rugenere/issues).
 
 ## License
 
