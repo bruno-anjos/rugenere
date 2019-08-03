@@ -1,8 +1,6 @@
 language: rust
-rust: 
-  - 1.35.0
+rust:
   - stable
-  - beta
   - nightly
 matrix: 
   allow_failures:
@@ -12,5 +10,5 @@ cache: cargo
 before_cache:
   - rm -rf "$TRAVIS_HOME/.cargo/registry/src"
 script:
-  - cargo build --verbose --all
+  - cargo build --release --verbose --all
   - cargo test --verbose --all
