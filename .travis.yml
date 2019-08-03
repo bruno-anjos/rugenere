@@ -7,8 +7,6 @@ matrix:
     - rust: nightly
   fast_finish: true
 cache: cargo
-before_cache:
-  - rm -rf "$TRAVIS_HOME/.cargo/registry/src"
 script:
   - cargo build --release --verbose --all
   - cargo test --verbose --all
