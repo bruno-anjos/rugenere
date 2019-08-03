@@ -69,3 +69,21 @@ fn write_to_file(file_name: &str, output: &str) {
 	file.write_all(output.as_bytes())
 		.expect("Error writing to file!");
 }
+
+#[cfg(test)]
+mod tests {
+	use super::*;
+
+	#[test]
+	fn test_input_file() {
+		let input = read_input_file("input_test").unwrap();
+		assert_eq!(input, "ThIS is jUSt aN ExAMple");
+	}
+
+	#[test]
+	fn test_output_file() {
+		let output = "DlGC mq tYQd eL ObYWtjo";
+		write_to_file("output_test", &output);
+		assert_eq!(read_input_file("output_test").unwrap(), output);
+	}
+}

@@ -57,3 +57,44 @@ pub fn change_char(input: char, key_char: char, mode: &CipherMode) -> char {
 
 	result as char
 }
+
+#[cfg(test)]
+mod tests {
+	use super::*;
+
+	#[test]
+	fn test_encode() {
+		let input = "ThIS is jUSt aN ExAmPLE".to_string();
+		let key = "KeY";
+		let result = do_final(&input, &key, &CipherMode::ENCODE);
+
+		assert_eq!(result, "DlGC mq tYQd eL ObYwTJO");
+	}
+
+	#[test]
+	fn test_decode() {
+		let input = "DlGC mq tYQd eL ObYwTJO".to_string();
+		let key = "kEy";
+		let result = do_final(&input, &key, &CipherMode::DECODE);
+
+		assert_eq!(result, "ThIS is jUSt aN ExAmPLE");
+	}
+
+	#[test]
+	fn test_bigger_key_than_input_encode() {
+		let input = "teSt".to_string();
+		let key = "thisIsABIGKey";
+		let result = do_final(&input, &key, &CipherMode::ENCODE);
+
+		assert_eq!(result, "mlAl");
+	}
+
+	#[test]
+	fn test_bigger_key_than_input_decode() {
+		let input = "mlAl".to_string();
+		let key = "thisIsABIGKey";
+		let result = do_final(&input, &key, &CipherMode::DECODE);
+
+		assert_eq!(result, "teSt");
+	}
+}
