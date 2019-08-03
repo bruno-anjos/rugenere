@@ -1,6 +1,11 @@
-# rugenere [![GitHub license](https://img.shields.io/badge/license-GNU-blue.svg)](https://github.com/bruno-anjos/rugenere/blob/master/LICENSE) [![Build Status](https://travis-ci.org/bruno-anjos/rugenere.svg?branch=master)](https://travis-ci.org/bruno-anjos/rugenere)
+# rugenere [![GitHub license](https://img.shields.io/badge/license-GNU-blue.svg)](https://github.com/bruno-anjos/rugenere/blob/master/LICENSE)
 
 **rugenere** is a simple [vigenère](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) cipher tool written in rust. It can encode and decode text either from the standard input or a file. It can also write the output to a file.
+
+| **Branches** | **Build Status** |
+|:--------:|:------------:|
+|  master  |[![Build Status](https://travis-ci.org/bruno-anjos/rugenere.svg?branch=master)](https://travis-ci.org/bruno-anjos/rugenere)|
+| dev      |[![Build Status](https://travis-ci.org/bruno-anjos/rugenere.svg?branch=dev)](https://travis-ci.org/bruno-anjos/rugenere)|
 
 ## Installing
 
