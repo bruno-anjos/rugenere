@@ -13,7 +13,6 @@ pub fn do_final(input: &String, key: &str, mode: &CipherMode) -> String {
 	for input_char in input.chars() {
 		if !input_char.is_alphabetic() {
 			output.push(input_char);
-			i += 1;
 			continue;
 		}
 		output.push(change_char(
