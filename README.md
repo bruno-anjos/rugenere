@@ -52,7 +52,7 @@ Run **rugenere** with the `m` flag set to `encode`
 ```bash
 > ./rugenere TESTKEY -m encode
 THis Is AN exaMPlE
-Result: MLal Mq EF obyFTdX
+Result: MLal Sw YG iptWTjX
 ```
 
 ### decode
@@ -61,7 +61,7 @@ Run **rugenere** with the `m` flag set to `decode`
 
 ```bash
 > ./rugenere TESTKEY -m decode
-MLal Mq EF obyFTdX
+MLal Sw YG iptWTjX
 Result: THis Is AN exaMPlE
 ```
 
@@ -71,7 +71,7 @@ Run **rugenere** with the `i` flag followed by the file name
 
 ```bash
 > ./rugenere TESTKEY -m encode -i input_test
-Result: mlal mq ef obyftdx
+Result: MlAL sw hNWl tX IvTQheo
 ```
 
 ### with output file
@@ -81,7 +81,7 @@ Run **rugenere** with the `o` flag followed by the file name
 ```bash
 > ./rugenere TESTKEY -m encode -i input_test -o output_test
 > cat output_test
-mlal mq ef obyftdx
+MlAL sw hNWl tX IvTQheo
 ```
 
 ## Built with

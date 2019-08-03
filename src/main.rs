@@ -82,7 +82,7 @@ mod tests {
 
 	#[test]
 	fn test_output_file() {
-		let output = "DlGC mq tYQd eL ObYWtjo";
+		let output = "MlAL sw hNWl tX IvTQheo";
 		write_to_file("output_test", &output);
 		assert_eq!(read_input_file("output_test").unwrap(), output);
 	}
