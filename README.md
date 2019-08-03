@@ -13,6 +13,7 @@ To install this tool just clone the git repository by running the following comm
 
 ```bash
 > git clone https://github.com/bruno-anjos/rugenere.git
+> cd rugenere
 > cargo build --release
 ```
 
