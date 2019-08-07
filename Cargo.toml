@@ -7,6 +7,9 @@ description = "Vigenère cipher tool written in rust that can encode, decode and
 keywords = ["vigenere", "cipher", "crypto", "cryptography", "encode", "decode"]
 categories = ["cryptography"]
 license = "LGPL-3.0-or-later"
+repository = "https://github.com/bruno-anjos/rugenere"
+homepage = "https://github.com/bruno-anjos/rugenere"
+documentation = "https://docs.rs/rugenere"
 
 [badges]
 travis-ci = { repository = "bruno-anjos/rugenere", branch = "master"}
