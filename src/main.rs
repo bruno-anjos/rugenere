@@ -3,11 +3,11 @@ extern crate clap;
 use clap::App;
 use std::fs;
 use std::fs::File;
-
 use std::io::Write;
-
 use std::io::Result;
-mod vigenere;
+
+mod lib;
+use lib::vigenere;
 
 const INPUT: &str = "input";
 const OUTPUT: &str = "output";
