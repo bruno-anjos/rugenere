@@ -3,6 +3,14 @@ name = "rugenere"
 version = "0.2.0"
 authors = ["Bruno Anjos <bruno.vale.anjos@gmail.com>"]
 edition = "2018"
+description = "Vigenère cipher tool written in rust that can encode, decode and store and read from files."
+keywords = ["vigenere", "cipher", "crypto", "cryptography", "encode", "decode"]
+categories = ["cryptography"]
+license = "LGPL-3.0-or-later"
+
+[badges]
+travis-ci = { repository = "bruno-anjos/rugenere", branch = "master"}
+maintenance = { status = "experimental" }
 
 [lib]
 name = "rugenere"
