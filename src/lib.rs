@@ -1,6 +1,6 @@
 //! # rugenere
 //!
-//! `rugenere` rugenere is a simple vigenère cipher tool written in rust.
+//! `rugenere` is a simple vigenère cipher tool written in rust.
 //! It can encode and decode text either from the standard input or a file.
 //! It can also write the output to a file.
 
@@ -11,8 +11,8 @@ pub mod vigenere {
 		DECODE,
 	}
 
-	/// Executes vigenere encoding/decoding depending on the specified mode
-	/// on the input with the key.
+	/// Returns a string with the result of encoding/decoding input with the specified key.
+	/// This method calls change_char on each character in the input.
 	pub fn do_final(input: &String, key: &str, mode: &CipherMode) -> String {
 		let key_chars: Vec<char> = key.chars().collect();
 		let mut output = Vec::new();
@@ -34,8 +34,8 @@ pub mod vigenere {
 		output.into_iter().collect()
 	}
 
-	/// Applies the vigenere cipher encoding/decoding only on this character
-	fn change_char(input: char, key_char: char, mode: &CipherMode) -> char {
+	/// Encodes/Decodes one character with one key character
+	pub fn change_char(input: char, key_char: char, mode: &CipherMode) -> char {
 		let (key_char_corrected, initial_char) = if input.is_lowercase() {
 			(key_char.to_ascii_lowercase(), 'a')
 		} else if input.is_uppercase() {
